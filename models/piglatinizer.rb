@@ -25,6 +25,12 @@ class PigLatinizer
     vowel_word = @new_word << "way"
   end
 
+  def consonant?(char)
+    !char.match(/[aeiouAEIOU]/)
+  end
+
+
+
   def begins_with_consonant
     if @new_word[0] == "q" && @new_word[1] == "u"
       qu = @new_word[0, 2].join("")
