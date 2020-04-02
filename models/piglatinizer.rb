@@ -30,6 +30,9 @@ class PigLatinizer
   end
 
   def piglatinize_word(word)
+    if !consonant?(word[0])
+      word+="way"
+    end
   end
 
 
